@@ -30,6 +30,7 @@ int main(int argc, char **argv, char **env){
         }
        // top->rst = (i<2) | (i==15);
        top->en = (i<0x9)|(i>0xa);
+       top->rst = (i>0x4)&(i<0x6);
         if(Verilated::gotFinish()) exit(0);
     }
 
